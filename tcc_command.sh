@@ -1,9 +1,6 @@
 set -x
 set -e
 
-#target_hostname=
-#extract_dir=
-
 apt -y install openssh-client
 ssh-keygen -R %target_hostname%
 sshpass -p %TargetPass% ssh -o StrictHostKeyChecking=no root@%target_hostname% 'uname -a'
